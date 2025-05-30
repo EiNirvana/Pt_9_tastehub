@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Pt_9_tastehub</string>
+    <string name="title_sign_up">Crear un nou compte</string>
+    <string name="name_usuari">Nom de usuari</string>
+    <string name="email_usuari">Email de usuari</string>
+    <string name="password_usuari">Contrasenya</string>
+    <string name="password_2_usuari">Repeteix la contrasenya</string>
+    <string name="button_sign_up">Crear compte</string>
+
+    <!-- Texts per als missatges de log in -->
+    <string name="name_email">Nom/email de usuari</string>
+    <string name="button_log_in">Log in</string>
+    <string name="title_log_in">Inici de sessió</string>
+    <string name="prefer_ncies">Preferències</string>
+    <string name="color_principal">Color principal</string>
+    <string name="color_secundari">Color secundari</string>
+    <string name="tipografia_de_lletra">Tipografia de lletra</string>
+    <string name="guardar_canvis">Guardar canvis</string>
+    <string name="modifica">Modifica</string>
+    <string name="receptes">Receptes</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+
+    <string name="carn">Carn</string>
+    <string name="peix">Peix</string>
+    <string name="postres">Postres</string>
+    <string name="coctels">Coctels</string>
+    <string name="verdures">Verdures</string>
+    <string name="ezmorzar">Ezmorzar</string>
+    <string name="pasta">Pasta</string>
+    <string name="llegums">Llegums</string>
+    <string name="suprimeix_compte">Suprimeix compte</string>
+    <string name="bol_de_salmo">Bol de salmó</string>
+    <string name="inclou">Inclou</string>
+    <string name="no_inclou">No Inclou</string>
+    <string name="nom_recepta">Nom Recepta</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="num_persones">10 persones</string>
+    <string name="preparaci">Preparació</string>
+    <string name="comentaris">Comentaris</string>
+    <string name="spaghetti_amb_tom_quet">Spaghetti amb tomàquet</string>
+    <string name="br_coli_a_la_barbacoa">Bròcoli a la barbacoa</string>
+    <string name="c_ctel_de_taronja">Còctel de taronja</string>
+    <string name="entrecot_amb_pure_de_patates">Entrecot amb pure de patates</string>
+    <string name="flan">Flan</string>
+    <string name="pollastre_fregit">Pollastre fregit</string>
+    <string name="gambes_saltejades">Gambes saltejades</string>
+    <string name="monjetes_amb_tom_quet_sec">Monjetes amb tomàquet sec</string>
+    <string name="past_s_de_pera">Pastís de pera</string>
+    <string name="pavlova">Pavlova</string>
+    <string name="pop">Pop</string>
+    <string name="sobre_nosaltres">Sobre nosaltres</string>
+    <string name="categories">Categories</string>
+    <string name="newsletter">Newsletter</string>
+    <string name="lore_implus">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</string>
+
+    <string-array name="spinner_items">
+        <item>Peix</item>
+        <item>Carn</item>
+        <item>Verdures</item>
+        <item>Postres</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

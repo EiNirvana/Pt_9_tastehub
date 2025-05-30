@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores básicos -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#D90036</color>
+
+
+    <!-- Colores principales App -->
+    <color name="primary">#0B735F</color>
+    <color name="secondary">#003429</color>
+    <color name="variantSecondary">#0CA789</color>
+    <color name="star">#FFBC42</color>
+
+    <!-- Estados -->
+    <color name="error">#FF0040</color>
+    <color name="success">#3BD142</color>
+    <color name="warning">#FFC000</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Colores principales de la app (ajustados para modo oscuro) -->
+    <color name="primary_dark">#0B735F</color> <!-- Mantiene su tono, adecuado para botones o resaltar -->
+    <color name="secondary_dark">#00564C</color> <!-- Más suave que el original -->
+    <color name="variantSecondary_dark">#0CA789</color> <!-- Puede mantenerse igual, es brillante -->
+    <color name="star_dark">#FFD54F</color> <!-- Más claro para brillar en fondo oscuro -->
+
+    <!-- Estados (ajustados para el tema oscuro) -->
+    <color name="error_dark">#FF5252</color> <!-- Más brillante para resaltar errores -->
+    <color name="success_dark">#4CAF50</color> <!-- Verde un poco más vibrante -->
+    <color name="warning_dark">#FFCA28</color> <!-- Amarillo más claro -->
+    <color name="info_dark">#64B5F6</color> <!-- Azul más suave -->
+
+    <!-- Fondos y texto específicos para el tema oscuro -->
+    <color name="background_dark">#121212</color> <!-- Fondo principal oscuro -->
+    <color name="card_background_dark">#1E1E1E</color> <!-- Fondo de tarjetas o secciones -->
+    <color name="divider_dark">#2C2C2C</color> <!-- Divisores sutiles -->
+    <color name="text_primary_dark">#FFFFFF</color> <!-- Texto principal sobre fondo oscuro -->
+    <color name="text_secondary_dark">#B3B3B3</color> <!-- Texto secundario (menos importante) -->
+    <color name="button_background_dark">#0B735F</color> <!-- Fondo de botones -->
+    <color name="button_text_dark">#FFFFFF</color> <!-- Texto de botones -->
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Barra superior -->
+    <View
+        android:id="@+id/barra_superior"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:background="#0B735F"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón de preferencias -->
+    <ImageButton
+        android:id="@+id/btn_preferencias"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:background="#00000000"
+        android:contentDescription="Boton de Preferenciass"
+        android:src="@drawable/frag01_preferencies"
+        app:layout_constraintBottom_toBottomOf="@id/barra_superior"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barra_superior" />
+
+    <!-- Botón Logo -->
+    <Button
+        android:id="@+id/btn_Logo"
+        android:layout_width="133dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="TasteHub"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/barra_superior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barra_superior" />
+
+    <!-- Botón favoritos -->
+    <ImageButton
+        android:id="@+id/btn_favoritos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="15dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Boton Favoritos"
+        android:src="@drawable/frag01_favoritos"
+        app:layout_constraintTop_toTopOf="@id/barra_superior"
+        app:layout_constraintBottom_toBottomOf="@id/barra_superior"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

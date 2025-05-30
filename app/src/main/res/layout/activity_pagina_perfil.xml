@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaginaPerfil">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.pt_9_tastehub.Fragment1"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Titulo(Perfil) -->
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20sp"
+        android:text="Perfil"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/fragment1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- CardView Icono -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card01"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/card_border"
+        app:layout_constraintTop_toBottomOf="@id/text01"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/act6_icono"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Informacion Personal -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/text01"
+        app:layout_constraintLeft_toRightOf="@id/card01">
+        <!-- User -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="User:     User1234"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/act6_linea" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Email:    user1234@gmail.com"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/act6_linea" />
+
+        <!-- Phone -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Telefon:  640186528"/>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/act6_linea" />
+    </LinearLayout>
+
+    <!-- Button (Edita Perfil)  -->
+    <Button
+        android:id="@+id/btn_editaPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Edita perfil"
+        android:fontFamily="@font/ubuntu_light"
+        android:backgroundTint="@color/primary"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@id/card01"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
+
+    <!-- Titulo(Mis recetas) -->
+    <TextView
+        android:id="@+id/text02"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20sp"
+        android:text="Les meves receptes"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/btn_editaPerfil"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Boton (Modifica) -->
+    <Button
+        android:id="@+id/btn_modifica01"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:backgroundTint="@color/primary"
+        android:text="@string/modifica"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_editaPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SmallSp">
+    </Button>
+
+    <!-- Recetas (Fila 1) -->
+    <LinearLayout
+        android:id="@+id/boxRecetasFila1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/text02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Categoría 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:contentDescription="Còctel de taronja"
+                android:src="@drawable/coctel_taronja"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coctels"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Còctel de taronja"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Categoría 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:contentDescription="@string/bol_de_salmo"
+                android:scaleType="fitXY"
+                android:src="@drawable/bol_pescado"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/peix"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/bol_de_salmo"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Categoría 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:contentDescription="Flan"
+                android:scaleType="fitXY"
+                android:src="@drawable/flan"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postres"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Flan"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Titulo(Favoritos) -->
+    <TextView
+        android:id="@+id/text03"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:textSize="20sp"
+        android:text="Favorits"
+        android:fontFamily="@font/ubuntu_light"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/boxRecetasFila1"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Boton (Modifica) -->
+    <Button
+        android:id="@+id/btn_modifica02"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:backgroundTint="@color/primary"
+        android:text="@string/modifica"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/boxRecetasFila1"
+        app:layout_constraintLeft_toRightOf="@id/text03"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SmallSp">
+    </Button>
+    <!-- Recetas (Fila 2) -->
+    <LinearLayout
+        android:id="@+id/boxRecetasFila2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/text03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Categoría 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:contentDescription="Pollastre fregit"
+                android:src="@drawable/fried_chicken"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carn"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pollastre fregit"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Categoría 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:contentDescription="astís de pera"
+                android:src="@drawable/pastis_de_perajpg"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postres"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pastís de pera"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Categoría 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Imagen -->
+            <ImageButton
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:contentDescription="Pavlova"
+                android:scaleType="fitXY"
+                android:src="@drawable/pavlova"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Botón -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:backgroundTint="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/postres"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pavlova"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Button (Edita Perfil)  -->
+    <Button
+        android:id="@+id/btn_addLista"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:padding="0dp"
+        android:text="Llista nova"
+        android:fontFamily="@font/ubuntu_light"
+        android:backgroundTint="@color/primary"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@id/boxRecetasFila2"
+        app:layout_constraintEnd_toEndOf="parent">
+    </Button>
+
+    <!-- Fragment 2 alineado en la parte inferior -->
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.pt_9_tastehub.Fragment2"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
