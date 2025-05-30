@@ -57,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/ubuntu_blod"
+            android:fontFamily="@font/ubuntu_light"
             android:textSize="25sp"
             android:textColor="@color/black"
             android:text="@string/nom_recepta" />
@@ -112,8 +112,8 @@
     <!-- Imagen Receta -->
     <ImageView
         android:id="@+id/img01"
-        android:layout_width="300dp"
-        android:layout_height="380dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:layout_marginTop="5dp"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintTop_toBottomOf="@id/box02"
