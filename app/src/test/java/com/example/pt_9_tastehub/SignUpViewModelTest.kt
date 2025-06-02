@@ -44,19 +44,49 @@ class SignUpViewModelTest {
         val status = mutableListOf<SignUpForm>()
         viewModel.formatStatus.observeForever { status.add(it) }
 
-        viewModel.test_nomUser("")
+        viewModel.test_emailUser("")
         assertFalse(status.last().isValid)
-        assertEquals("El email no pot estar buit", status.last().errorCognom)
+        assertEquals("El email no pot estar buit", status.last().errorEmail)
 
-        viewModel.test_nomUser("       ")
+        viewModel.test_emailUser("       ")
         assertFalse(status.last().isValid)
-        assertEquals("El email no pot estar buit", status.last().errorCognom)
+        assertEquals("El email no pot estar buit", status.last().errorEmail)
     }
 
     @Test
     fun `test contrasenya buida`(){
+        val status = mutableListOf<SignUpForm>()
+        viewModel.formatStatus.observeForever{status.add(it)}
 
+        viewModel.test_passwordUser("")
+        assertFalse(status.last().isValid)
+        assertEquals("La contrasenya no pot estar buida", status.last().errorContra)
+
+        viewModel.test_passwordUser("         ")
+        assertFalse(status.last().isValid)
+        assertEquals("La contrasenya no pot estar buida", status.last().errorContra)
     }
 
+    @Test
+    fun `test contrasenya II buida`(){
+        val status = mutableListOf<SignUpForm>()
+        viewModel.formatStatus.observeForever{status.add(it)}
+
+        viewModel.test_passwordIIUser("")
+        assertFalse(status.last().isValid)
+        assertEquals("La contrasenya no pot estar buida", status.last().errorContraII)
+
+        viewModel.test_passwordIIUser("         ")
+        assertFalse(status.last().isValid)
+        assertEquals("La contrasenya no pot estar buida", status.last().errorContraII)
+    }
+
+    @Test
+    fun `test email correcte`(){
+        val status = mutableListOf<SignUpForm>()
+        viewModel.formatStatus.observeForever{status.add(it)}
+
+        viewModel.on
+    }
 
 }

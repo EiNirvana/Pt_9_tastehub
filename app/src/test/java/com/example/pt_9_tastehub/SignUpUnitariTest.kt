@@ -22,7 +22,7 @@ class SignUpUnitariTest {
     @Test
     fun `updateEmailUser retorna error quan esta buit`(){
         viewModel.updateEmailUser("")
-        viewModel.test_emailUser()
+        viewModel.test_emailUser("")
         assertEquals("El email d'usuari no pot estar buit", viewModel.errorEmail.value)
     }
 

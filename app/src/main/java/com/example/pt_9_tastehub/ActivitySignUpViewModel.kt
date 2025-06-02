@@ -8,7 +8,9 @@ import androidx.lifecycle.ViewModel
 data class  SignUpForm(
     val isValid: Boolean = false,
     val errorNom: String? = null,
-    val errorCognom: String? = null,
+    val errorEmail: String? = null,
+    val errorContra: String? = null,
+    val errorContraII: String? = null,
     var nomUser : String? = null,
     var emailUser : String? = null,
     var passwordUser : String? = null,
@@ -65,14 +67,14 @@ class ActivitySignUpViewModel : ViewModel() {
             errorEmailUser.value = ""
         }
     }
-    public fun test_passwordUser(){
+    public fun test_passwordUser(passw: String){
         if(passwordUser.isEmpty()){
             errorPassUser.value = "La contrasenya no pot estar buit"
         } else {
             errorPassUser.value = ""
         }
     }
-    public fun test_passwordIIUser(){
+    public fun test_passwordIIUser(passwII: String){
         if(passwordIIUser.isEmpty()){
             errorPassIIUser.value = "S'ha de repetir la contrasenya"
         } else {
@@ -83,7 +85,8 @@ class ActivitySignUpViewModel : ViewModel() {
     fun testUser() {
         test_nomUser(nomUser)
         test_emailUser(emailUser)
-        test_passwordUser()
+        test_passwordUser(passwordUser)
+        test_passwordIIUser(passwordIIUser)
     }
 
     /*fun signUpUser(){

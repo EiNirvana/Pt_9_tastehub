@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pt_9_tastehub.NewRecepie">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <!-- Texto (Nova Recepta) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_light"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="Nova Recepta"/>
+
+        <!-- Texto (Nom) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Nom Recepta:"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/editTextReceta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <!-- Texto (Num Persones) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Numero Persones:"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/editTextNumPer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <!-- Texto (Dificultat) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Dificultat:"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/editTextDificultat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/ubuntu_light"/>
+
+        <!-- Box (Ingrediente + Button) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <!-- Añadir Ingredientes -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Ingredients:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- Espaciador -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!-- Boton (Añadir Ingrediente) -->
+            <Button
+                android:id="@+id/btn_addIngrediente"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:backgroundTint="@color/secondary"
+                android:text="Afegir"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Box (Ejemplo Ingredientes) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/textNumPer"
+            app:layout_constraintStart_toStartOf="parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 3"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="60dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 6"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 7"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:text="Ingrediente 8"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Box (Paso + Button) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <!-- Añadir Ingredientes -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Pas:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- Espaciador -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!-- Boton (Añadir Ingrediente) -->
+            <Button
+                android:id="@+id/btn_addPaso"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:backgroundTint="@color/secondary"
+                android:text="Afegir"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+        <!-- Box (Imagen + Button) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <!-- Añadir Ingredientes -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Imatge:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- Espaciador -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <!-- Boton (Añadir Ingrediente) -->
+            <Button
+                android:id="@+id/btn_addImg"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:backgroundTint="@color/secondary"
+                android:text="Afegir"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- Boton (Tornar) -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:padding="0dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:backgroundTint="@color/secondary"
+            android:text="Tornar"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/fragment1"
+            app:layout_constraintEnd_toEndOf="parent">
+        </Button>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
