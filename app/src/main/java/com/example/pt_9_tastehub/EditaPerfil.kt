@@ -1,5 +1,6 @@
 package com.example.pt_9_tastehub
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -26,6 +27,13 @@ class EditaPerfil : AppCompatActivity() {
         btnDelete.setOnClickListener {
             // Muestra el Toast
             Toast.makeText(this, "Compte Suprimit", Toast.LENGTH_SHORT).show()
+        }
+
+        val btnGuardar: Button = findViewById(R.id.btn_changePass)
+
+        btnGuardar.setOnClickListener{
+            Toast.makeText(this, "Informació guardada", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, PaginaPerfil::class.java)
         }
 
     }
